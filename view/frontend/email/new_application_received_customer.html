@@ -1,0 +1,19 @@
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject Welcome to {{var store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"Customer Email",
+"var customer.name":"Customer Name"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;">Dear {{var data.customer}},</h1>
+<p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">Thank you for submitting a wholesale application to {{var data.storename}}. This email confirms that {{var data.storename}} has received your application and will begin reviewing it. In the event additional information is needed, we will contact you.</p>                                                        
+
+{{template config_path="design/email/footer_template"}}

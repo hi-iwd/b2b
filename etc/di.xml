@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Customer\Model\ResourceModel\Grid\Collection">
+    <plugin
+            name="b2b_customer_listing_iwd_columns"
+            type="IWD\B2B\Plugin\Customer\ResourceModel\Customer\Grid\Collection"
+            sortOrder="200"
+            disabled="false"
+    />
+    </type>
+    <type name="Magento\Paypal\Model\AbstractConfig">
+        <plugin name="iwd_b2b_paypal_config" type="IWD\B2B\Plugin\Payments\Paypal\Config"/>
+    </type>
+</config>

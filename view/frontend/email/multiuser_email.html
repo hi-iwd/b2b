@@ -1,0 +1,55 @@
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject Welcome to {{var store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"Customer Email",
+"var customer.name":"Customer Name"
+} @-->
+{{template config_path="design/email/header_template"}}
+
+<h1 style="font-size:18px; font-weight:normal; line-height:22px; margin:0 0 11px 0;" >Dear {{var data.customer}},</h1>
+<p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">A new subuser account has been created by {{var data.parent}} to be a member of his customer account on {{var data.storename}}.</p>
+<div style="width: 288px; margin:0 auto; text-align:center;font-weight:bold;font-size:18px;padding-top:20px;">
+    <ul>
+        <li style="margin: 0px 5px 5px 0px;text-transform: uppercase;list-style:none;">
+            <div style="display: table; height: 50px; overflow: hidden; width: 210px; background-color: #26a9e0;border-radius:2px 2px;">
+                <div style="display: table-cell;vertical-align: middle;width: 100%;margin: 0 auto;text-align: center;">
+                    <div><a style="color: #fff;text-decoration: none;padding: 12px 12px;display: block;" href="{{var data.intlink}}customer/account/createPassword/?id={{var data.customerid}}&token={{var data.token}}" target="_blank">GET STARTED</a></div>
+                </div>
+            </div>
+        </li>
+    </ul> 
+</div>    
+<!--   {{var data.intlink}}                                         
+<p style="font-size:12px; line-height:16px; margin:0 0 8px 0;">When you sign in to your account, you will be able to:</p>
+<ul style="font-size:12px; line-height:16px; margin:0 0 16px 0; padding:0;">
+    <li style="list-style:none inside; padding:0 0 0 10px;">Proceed through checkout faster</li>
+    <li style="list-style:none inside; padding:0 0 0 10px;">Check the status of orders</li>
+    <li style="list-style:none inside; padding:0 0 0 10px;">View past orders</li>
+    <li style="list-style:none inside; padding:0 0 0 10px;">Store alternative addresses (for shipping to multiple family members and friends)</li>
+</ul>-->
+					</td>
+                </tr>
+                <tr>
+                    <td class="footer">
+                        <table>
+                            <tr>
+                                <td>
+                                    <p><a href="#">{{trans "About Us"}}</a></p>
+                                    <p><a href="#">{{trans "Customer Service"}}</a></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- End wrapper table -->
+</body>

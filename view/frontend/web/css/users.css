@@ -1,0 +1,149 @@
+.b2b-manage-users .actions-toolbar .action.primary{margin-right:0 !important;}
+.b2b-manage-users .actions-toolbar {padding-bottom: 25px;}
+
+.fieldset > .field, .fieldset > .fields > .field {
+    margin: 0 0 20px;
+}
+.fieldset > * {
+    letter-spacing: normal;
+}
+.fieldset > .legend {
+    box-sizing: border-box;
+    float: left;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    padding: 0 0 8px;
+    width: 100%;
+}
+
+.fieldset > .field.required > .label::after, .fieldset > .fields > .field.required > .label::after {
+    color: #e02b27;
+    content: "*";
+    font-size: 1.2rem;
+    margin: 0 0 0 5px;
+}
+.fieldset > .field > .label, .fieldset > .fields > .field > .label {
+    font-weight: 600;
+}
+.fieldset > .field > .label, .fieldset > .fields > .field > .label {
+    display: inline-block;
+    margin: 0 0 8px;
+}
+.fieldset > .legend {
+    padding: 12px 0 10px !important;
+}
+.fieldset > .field, .fieldset > .fields > .field {
+    margin: 0 0 0 !important;
+}
+.fieldset > .field > .label, .fieldset > .fields > .field > .label {
+    display: inline-block;
+    margin: 20px 0 8px 0 !important;
+}
+.au-title{margin-bottom:0 !important;}
+.au-title > .legend{margin-bottom:0 !important;}
+.b2b-manage-users .field-name-account .label{margin-top:12px !important;margin-bottom:3px !important;}
+.b2b-manage-users .actions-toolbar{position:relative;margin-top:20px;float:right;}
+.b2b-manage-users .field-name-account .label {font-size: 18px;}
+.b2b-manage-users .field-name-firstname .label, .b2b-manage-users .field-name-lastname .label,
+.b2b-manage-users .email .label, .b2b-manage-users .field-name-role .label {
+    font-size: 14px !important;
+}
+.legendtitle {
+    font-size: 2.2rem;
+    font-weight: 300;
+    /*margin-top: 10%;*/
+    margin-top:10px !important;
+}
+
+.select-style {
+   width: 100px;
+   height: 34px;
+   overflow: hidden;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+
+.select-style select {
+    background-color: transparent;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 34px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #222;
+}
+
+.select-style select:focus,
+.select-style select:active {
+    outline: none;
+    background-color: #f5f5f5;
+}
+.labelspantitle { font-size: 18px;}
+
+
+table tr th { font-weight: bold; border-bottom: 1px solid #eee; border-top: 1px solid #eee;  }
+
+.b2b-manage-users-table tr th.status{width:102px;}
+
+@media screen and (max-width: 767px) {
+	.b2b-manage-users .actions-toolbar{top:0;margin-bottom:0;}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 330px) {
+  .table-wrapper .table:not(.totals):not(.cart):not(.table-comparison) tbody > tr > td:last-child {
+      padding-bottom: 25px;
+  }
+  .select-style {
+    float: right;
+    margin-right: 100px;
+  }
+  td.status:before { padding-top: 8px; }
+}
+@media only screen and (min-device-width : 360px) and (max-device-width : 370px) {
+  .table-wrapper .table:not(.totals):not(.cart):not(.table-comparison) tbody > tr > td:last-child {
+      padding-bottom: 25px;
+  }
+  .select-style {
+    float: right;
+    margin-right: 130px;
+  }
+  td.status:before { padding-top: 8px; }
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 627px) {
+  .table-wrapper .table:not(.totals):not(.cart):not(.table-comparison) tbody > tr > td:last-child {
+      padding-bottom: 25px;
+  }
+  .select-style {
+    float: right;
+    margin-right: 160px;
+  }
+  td.status:before { padding-top: 8px; }
+}
+
+@media only screen and (min-device-width : 470px) and (max-device-width : 480px) {
+  .table-wrapper .table:not(.totals):not(.cart):not(.table-comparison) tbody > tr > td:last-child {
+      padding-bottom: 25px;
+  }
+  .select-style {
+    float: right;
+    margin-right: 250px;
+  }
+  td.status:before { padding-top: 8px; }
+}
+
+@media only screen and (min-device-width : 560px) and (max-device-width : 568px) {
+  .table-wrapper .table:not(.totals):not(.cart):not(.table-comparison) tbody > tr > td:last-child {
+      padding-bottom: 25px;
+  }
+  .select-style {
+    float: right;
+    margin-right: 350px;
+  }
+  td.status:before { padding-top: 8px; }
+}

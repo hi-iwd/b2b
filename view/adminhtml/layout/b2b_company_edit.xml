@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <head>
+        <css src="IWD_B2B::css/customadmin.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="IWD\B2B\Block\Adminhtml\Company\Edit" name="b2b_company_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="IWD\B2B\Block\Adminhtml\Company\Edit\Tabs" name="b2b_company_edit_tabs">
+                <block class="IWD\B2B\Block\Adminhtml\Company\Edit\Tab\General" name="b2b_company_edit_tab_general"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">general_section</argument>
+                    <argument name="block" xsi:type="string">b2b_company_edit_tab_general</argument>
+                </action>
+                <block class="IWD\B2B\Block\Adminhtml\Company\Edit\Tab\Employees" name="b2b_company_edit_tab_employee"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">employee_section</argument>
+                    <argument name="block" xsi:type="string">b2b_company_edit_tab_employee</argument>
+                </action>
+                <block class="IWD\B2B\Block\Adminhtml\Company\Edit\Tab\PaymentTerms" name="b2b_company_edit_tab_paymentterms"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">credit_section</argument>
+                    <argument name="block" xsi:type="string">b2b_company_edit_tab_paymentterms</argument>
+                </action>
+                <block class="IWD\B2B\Block\Adminhtml\Company\Edit\Tab\ShippingTerms" name="b2b_company_edit_tab_shippingterms"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">shipping_section</argument>
+                    <argument name="block" xsi:type="string">b2b_company_edit_tab_shippingterms</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">orders_section</argument>
+                    <argument name="block" xsi:type="array">
+                        <item name="label" xsi:type="string">Orders</item>
+                        <item name="title" xsi:type="string">Orders</item>
+                        <item name="url" xsi:type="helper" helper="IWD\B2B\Helper\Data::getOrdersGridUrl"></item>
+                        <item name="class" xsi:type="string">ajax</item>
+                    </argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

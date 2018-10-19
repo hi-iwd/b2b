@@ -1,0 +1,153 @@
+@media screen and (max-width: 980px) {
+    .b2b-wrapper {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 718px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .place-to-order {
+        width: 320px
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center {
+        width: 310px;
+        padding-bottom: 25px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center .marketing-btn {
+        margin-bottom: none;
+    }
+    .b2b-wrapper .b2b-dashboard-container .place-to-order h3 {
+        line-height: 1.25em;
+    }
+    .b2b-wrapper .b2b-dashboard-container .b2b-steps .item h4 {
+        line-height: 28px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .right .b2b-steps {
+        width: 310px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center h3 {
+        line-height: 1.25em;
+        margin-bottom: 11px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center a {
+        padding: 15px 11px;
+        text-align: center;
+        width: 214px;
+        margin-bottom: 26px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center a:last-child {
+        padding: 15px 20px;
+        width: 232px;
+    }
+    .b2b-wrapper .b2b-quick-order .b2b-quick-order-container {
+        width: 668px;
+    }
+    .b2b-wrapper .b2b-quick-order .input-wrapper input {
+        width: 627px;
+    }
+    .quick-order-input {
+        border: 2px solid #eae4db !important;
+    }
+    .b2b-wrapper .quick-search-result .item-result .desc-item {
+        width: 425px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .b2b-wrapper {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 430px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .place-to-order {
+        width: 430px;
+        float: none
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center {
+        float: none;
+        padding: 34px 42px 22px;
+        width: 410px;
+    }
+    .b2b-wrapper .b2b-sub-header h4 {
+        float: none !important;
+        margin-bottom: 25px;
+    }
+    .b2b-wrapper .b2b-sub-header .b2b-to-store {
+        float: none !important;
+        display: block;
+        widtH: 176px;
+        height: 28px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .b2b-steps .item h4 {
+        margin-bottom: 6px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .b2b-steps .item p {
+        line-height: 1.6em;
+        margin-bottom: 21px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center a {
+        margin-bottom: 29px;
+        padding: 13px 11px;
+        text-align: center;
+        width: 258px;
+    }
+    .b2b-wrapper .b2b-dashboard-container .download-center a:last-child {
+        line-height: 1.15em;
+        padding: 13px 20px;
+        width: 248px;
+    }
+    .b2b-wrapper .b2b-quick-order .b2b-quick-order-container {
+        width: 430px;
+    }
+    .b2b-wrapper .b2b-quick-order .input-wrapper input {
+        width: 389px;
+    }
+    .b2b-wrapper .quick-search-result .item-result .desc-item {
+        width: 195px;
+    }
+}
+
+
+/*
+@media screen and (min-width: 479px) and (max-width: 767px) {
+	.b2b-overflow{overflow: visible;}
+	#b2b-ajaxcart-modal {margin: 0; width: 100%;}
+}
+*/
+
+@media screen and (max-width: 767px) {
+    .b2b-overflow {
+        overflow: visible;
+    }
+    #b2b-ajaxcart-modal {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /*
+	.b2b-overflow{overflow: visible;}
+	.b2b-wrapper .table-footer {width:375px;}
+	div#iwd-test-header {width: 100%;}
+	.b2b-wrapper .div-table .table-body .table-row:last-child {width: 100%;}
+	.b2b-iwd-brand-download {bottom: 10px; right: -259px;}
+	div#b2b-shopping-cart {width: 430px;}
+	div#b2b-ajaxcart-modal {width: 430px; margin: 0px auto;}
+	div.b2b-modal-dialog { margin: 0 auto; }
+	.b2b-wrapper .b2b-dashboard-container .b2b-download-center{height: 515px;}
+*/
+    .b2b-wrapper .b2b-quick-order .input-wrapper label {
+        margin-top: 15px;
+    }
+}
+
+
+/*
+@media screen and (min-width: 768px) and (max-width: 979px) {
+	div#iwd-test-header { width: 615px; }
+	div#iwd-cart-test {	width: 194px;}
+	.b2b-wrapper .b2b-shopping-cart .b2b-cart-name {width: 194px;margin-right: 10px;}
+	.b2b-wrapper .b2b-dashboard-container .b2b-download-center {border: 3px solid #ededed;background: #ffffff;padding: 34px 47px;width: 331px;height: 515px;margin-top: 23px;}
+	.b2b-iwd-brand-download {bottom: 10px;position: relative;right: -183px;}
+	.b2b-wrapper .div-table .table-body .iwd-b2b-cart {width: 627px}
+}
+*/

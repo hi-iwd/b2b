@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <b2b>
+            <access_login_form>
+            	<redirect_after_login>dashboard</redirect_after_login>
+            	<disable_standard_login_registration>1</disable_standard_login_registration>
+                <hide_info>
+                	<hide_info_price>0</hide_info_price>
+                	<hide_info_addtocart>0</hide_info_addtocart>
+                	<price_button_text>Register to Purchase</price_button_text>
+                	<addtocart_button_text>Register to Purchase</addtocart_button_text>
+				</hide_info>
+                <group>1,2,3</group>
+				<restrict_access>0</restrict_access>
+				<dismessage><![CDATA[Your account has been disabled. Please contact your company administrator for details.]]></dismessage>
+				<message><![CDATA[Sorry, you are not permitted to access this area of the website.]]></message>
+				<redirect><![CDATA[/]]></redirect>
+                <title1>WHOLESALE LOGIN</title1>
+                <title2>Not a Wholesaler?</title2>
+                <text_above><![CDATA[Interested in becoming a wholesaler?]]></text_above>
+                <text_apply>REGISTER</text_apply>
+                <text_below><![CDATA[Not a wholesaler but would still like to login to your customer account? <a href="/customer/account/login">Login Here</a>]]></text_below>
+			</access_login_form>
+			<register_form>
+				<success><![CDATA[Thank you for submitting the registration form. We will begin reviewing your application and contact you shortly.]]></success>
+			</register_form>
+            <emails>
+                <recieved_template>b2b_emails_recieved_template</recieved_template>
+                <customer_recieved_template>b2b_emails_customer_recieved_template</customer_recieved_template>
+                <customer_approved>b2b_emails_customer_approved</customer_approved>
+                <multiuser_template>b2b_emails_multiuser_template</multiuser_template>
+            </emails>
+            <b2btables>
+            	<addtocart_method>auto</addtocart_method>
+            	<addtocart_auto_delay>3</addtocart_auto_delay>
+            	<view_all_products_table>
+                	<title>View All Products</title>            	
+                	<desc><![CDATA[Browse all products in grid view.]]></desc>
+                	<table_width_products>auto</table_width_products>
+				</view_all_products_table>
+            	<prev_ordered_table>
+                	<title>Previously Ordered Items</title>            	
+                	<desc><![CDATA[Easily reorder specific product from previous orders.]]></desc>
+                	<table_width_reorder>auto</table_width_reorder>
+				</prev_ordered_table>
+                <quick_order_table>
+                	<table_width>auto</table_width>
+                </quick_order_table>
+			</b2btables>
+            <download_center_table>
+                <title>Download Center</title>            	
+                <desc><![CDATA[Get access to the latest resources available for products and download sales tools to help store conversion.]]></desc>
+                <products_files_button>Products Files</products_files_button>
+                <marketing_files_button>Marketing Materials</marketing_files_button>
+			</download_center_table>
+            <order_by_file_block>
+                <title>Order by File</title>
+                <desc><![CDATA[Upload CSV file with "sku" and "qty" columns.]]></desc>
+                <button>Browse &amp; Upload</button>                
+            </order_by_file_block>
+            <account_users_block>
+                <title>Account Users</title>
+                <desc><![CDATA[Manage account users' info and access.]]></desc>
+                <button>Manage Users</button>                
+            </account_users_block>
+            <success_page>
+                <title1>Order Number</title1>
+                <title2>Your order on behalf of {b2b_store_name} has been submitted for approval.</title2>
+                <title3>An email confirmation has been sent to you.</title3>
+                <text_button>Review your order</text_button>
+            </success_page>
+            <credit_limit_notification>
+                <credit_notification><![CDATA[Some payment options are unavailable since the order total exceeds your available credit of]]></credit_notification>
+            </credit_limit_notification>
+            <guest_checkout>
+            	<use_quest_limit>0</use_quest_limit>
+            	<use_quest_limit_message>1</use_quest_limit_message>
+                <guest_limit_notification><![CDATA[Register for a wholesale account with us to access additional payment methods]]></guest_limit_notification>
+            </guest_checkout>
+            <matrix>                
+                <availability>1</availability>
+                <prev_ordered>1</prev_ordered>
+                <sku>1</sku>
+                <price>1</price>
+                <align>left</align>
+            </matrix>
+        </b2b>
+    </default>
+</config>

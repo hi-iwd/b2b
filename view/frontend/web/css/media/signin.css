@@ -1,0 +1,39 @@
+	@media screen and (max-width: 479px) {
+		#b2b-signin-modal .b2b-modal-dialog {width: 320px;margin: 30px auto;z-index:1060;	}
+		div#b2b-forgot-form { width: 270px; margin: 100px auto 0;padding: 31px 27px 0;}
+		.b2b-login-modal-content{padding:31px 27px 40px;}
+		.b2b-success-modal-content{padding:31px 27px 40px;}
+		.b2b-forgot-form .buttons-set button{width:100%;}
+		.buttons-set button.button {float: none !important; margin: 0 !important;}
+		.b2b-forgot-form .buttons-set .back-link{display: block; margin-top: 0;}
+		#b2b-signin-modal  a.close{right: 0;top: 0;}
+		#b2b-signin-modal .b2b-dialog-title h5{font-size: 28px;}
+		#b2b-signin-modal .b2b-modal-body{padding: 40px 26px 53px}
+		#b2b-signin-modal .box-input input{width: 261px;}
+		#b2b-signin-modal .b2b-dialog-action p{margin-top: 62px;}
+		#b2b-signin-modal .b2b-dialog-action a.btn-login{margin: 0;position: absolute;right: 0;}
+		#b2b-signin-modal .b2b-dialog-action{position:relative}
+		#b2b-signin-modal .b2b-logout-form h4{font-size: 15px;}
+		.buttons-set button.button {margin: 0 !important;}
+		.b2b-success-form a.review_order_btn{padding:0 15px;}
+	}
+	@media screen and (min-width: 479px) and (max-width: 767px) {
+		div#b2b-forgot-form { width: 270px; margin: 100px auto 0;}
+		.b2b-login-modal-content{padding:31px 27px 40px;}
+		.b2b-success-modal-content{padding:31px 27px 40px;}
+		.b2b-forgot-form .buttons-set .back-link {float: right; }
+		.b2b-forgot-form .buttons-set button{width:100%;}
+		.buttons-set button.button {margin: 0 !important;}
+		.b2b-forgot-form .b2b-iwd-brand-container div.b2b-iwd-brand-box{margin-top:14px;}
+		.b2b-iwd-brand-download {bottom: -60px;position: relative;	right: -199px;}
+		div.b2b-iwd-brand-login{ float: right; margin: 12px -23px -33px 0; position: relative; bottom: 0; right: 0;}
+		.b2b-success-form a.review_order_btn{padding:0 15px;}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		div#b2b-forgot-form { width: 390px; margin: 145px auto 0;}
+		.buttons-set button.button {margin: 5px 0 0 50px !important;}
+		.b2b-forgot-form .b2b-iwd-brand-container div.b2b-iwd-brand-box{margin-top:14px;}
+		.b2b-iwd-brand-download {bottom: -68px;	position: relative;	right: -124px;}
+		div.b2b-iwd-brand-login{ float: right; margin: 12px -23px -33px 0; position: relative; bottom: 0; right: 0;}
+	}

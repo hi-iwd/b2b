@@ -1,0 +1,88 @@
+.clearfix:before,.clearfix:after {
+	content: "";
+	display: table
+}
+
+.clearfix:after {
+	clear: both
+}
+
+.clearfix {
+	*zoom: 1
+}
+
+.prettycheckbox,.prettyradio {
+	display: inline-block;
+	padding: 0;
+	margin: 0
+}
+
+.prettycheckbox>a,.prettyradio>a {
+	margin-bottom:0 !important;
+	height: 30px;
+	width: 30px;
+	display: block;
+	float: left;
+	cursor: pointer;
+	margin: 0;
+	background: url('../images/sprite.png');
+	border:1px solid #e4e4e4;
+}
+
+.prettycheckbox>a:focus,.prettyradio>a:focus {
+	outline: 0 none
+}
+
+.prettycheckbox label,.prettyradio label {
+	display: block;
+	float: left;
+	margin: 6px 5px;
+	cursor: pointer
+}
+
+.prettycheckbox a.disabled,.prettycheckbox label.disabled,.prettyradio a.disabled,.prettyradio label.disabled
+	{
+	cursor: not-allowed
+}
+
+.prettycheckbox>a {
+	background-position: 0px 20px
+}
+
+
+.prettycheckbox>a.checked {
+	background-position: -250px -60px
+}
+
+
+.prettycheckbox>a.checked.disabled {
+	background-position: -250px -60px
+}
+
+.prettycheckbox>a.disabled {
+	background-position: -250px -60px
+}
+
+.prettyradio>a {
+	background-position: -180px 0
+}
+
+.prettyradio>a:focus {
+	background-position: -210px 0
+}
+
+.prettyradio>a.checked {
+	background-position: -240px 0
+}
+
+.prettyradio>a.checked:focus {
+	background-position: -270px 0
+}
+
+.prettyradio>a.checked.disabled {
+	background-position: -330px 0
+}
+
+.prettyradio>a.disabled {
+	background-position: -300px 0
+}

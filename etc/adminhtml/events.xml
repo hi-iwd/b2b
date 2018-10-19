@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="adminhtml_customer_prepare_save">
+        <observer name="b2bcustomerapproved" instance="IWD\B2B\Observer\CheckB2BCustomerConfirmed" />
+    </event>
+    <event name="adminhtml_company_customer_prepare_save">
+        <observer name="b2bcompanycustomerapproved" instance="IWD\B2B\Observer\CheckB2BCustomerConfirmed" />
+    </event>    
+    <event name="customer_delete_commit_after">
+        <observer name="b2bdeletecustomer" instance="IWD\B2B\Observer\DeleteB2BCustomer" />
+    </event>    
+    <!--<event name="controller_action_predispatch">-->
+        <!--<observer name="checkb2b" instance="IWD\B2B\Observer\CustomersPreDispatchObserver" />-->
+    <!--</event>-->
+</config>

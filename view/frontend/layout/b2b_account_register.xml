@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="b2b_onecolumn_login" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Wholesale Registration</title>
+        <css src="IWD_B2B::css/styles.css"/>
+        <css src="IWD_B2B::css/bootstrap.css"/>
+        <css src="IWD_B2B::css/media/signin.css"/>
+        <css src="IWD_B2B::css/media/register.css"/>
+        <css src="IWD_B2B::css/media/global.css"/>
+    </head>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">B2B Login</argument>
+            </action>            
+        </referenceBlock>
+        <referenceContainer name="header.container" remove="true" />
+        <referenceContainer name="b2b_content">
+			<block class="IWD\B2B\Block\Account\Register" name="account.register" as="b2b.account.register" template="account/register.phtml" cacheable="false">
+				<block class="IWD\B2B\Block\Messages" name="b2b.messages" as="b2b.messages" template="messages.phtml" />
+				<block class="IWD\B2B\Block\Account\Register" name="account.register.storeinfo" as="account.register.storeinfo" template="account/register/store-info.phtml" />
+				<block class="IWD\B2B\Block\Account\Register" name="account.register.shipping" as="account.register.shipping" template="account/register/shipping.phtml" />
+				<block class="IWD\B2B\Block\Account\Register" name="account.register.billing" as="account.register.billing" template="account/register/billing.phtml" />
+			</block>
+		
+            <block name="customer.section.config" class="Magento\Customer\Block\SectionConfig"
+                   template="Magento_Customer::js/section-config.phtml"/>
+            <block name="customer.customer.data"
+                   class="Magento\Customer\Block\CustomerData"
+                   template="Magento_Customer::js/customer-data.phtml"/>
+        
+        </referenceContainer>
+    
+		<referenceContainer name="page.wrapper">
+			<referenceContainer name="footer-container" remove="true" />
+		</referenceContainer>
+		<referenceContainer name="before.body.end">
+			<referenceContainer name="b2b.sticky.footer" remove="true" />
+		</referenceContainer>
+    </body>
+</page>

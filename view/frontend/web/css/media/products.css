@@ -1,0 +1,24 @@
+@media screen and (max-width: 767px) {
+
+	.b2b-product-dialog .configurable dd select, 
+	.b2b-product-dialog .configurable dd select:focus{width: 100%;}
+
+	.b2b-product-dialog  p.required{position: absolute;right: 0;}
+	.b2b-product-dialog .b2b-modal-action{padding-top: 5px;position: relative;}
+	.b2b-product-dialog .b2b-modal-action .btn-small{padding: 12px !important;/*background:none repeat scroll 0 0 transparent !important;*/}
+	.b2b-product-dialog .b2b-modal-action .btn-small:hover{color: #ffffff !important}
+	
+	.b2b-wrapper .right, .b2b-product-dialog .btn-large{margin-top: 45px;}
+	.b2b-product-dialog .b2b-option-available{float: none !important;margin-right: 15px;margin-top: 45px;text-align: right;width: 275px;}
+	.b2b-product-dialog .b2b-option-available input{margin-left:10px}
+
+	
+	
+	/** grouped **/
+	.b2b-grouped-items-table .item .qty{bottom: 7px;position: absolute;right: 0;}
+	.b2b-grouped-items-table .item .product-name{margin-right:0;width: 270px;margin-bottom:30px}
+	.b2b-grouped-items-table .item .product-name h3{margin-bottom:15px}
+	.b2b-grouped-items-table .item .available{float:right !important;text-align:left;width: 270px;margin-right:0}
+	.b2b-grouped-items-table .item{position:relative}
+	
+}

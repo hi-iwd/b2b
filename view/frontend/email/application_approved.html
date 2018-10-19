@@ -1,0 +1,31 @@
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject Welcome to {{var store.getFrontendName()}} @-->
+<!--@vars {
+"var this.getUrl($store, 'customer/account/')":"Customer Account URL",
+"var customer.email":"Customer Email",
+"var customer.name":"Customer Name"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<h1 style="font-size:22px; font-weight:normal; line-height:22px; margin:0 0 11px 0;" >Dear {{var data.customer}},</h1>
+<p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">Congratulations, your recent wholesale application to {{var data.storename}} has been approved. Below is your account information in order to login and access the wholesale website.</p>
+<p style="font-size:12px; line-height:16px; margin:0 0 16px 0;">You may change your username and password after logging into your <a href="{{var this.getUrl($store, '/')}}" style="color:#1E7EC8;">account</a>.</p>                            
+<p style="border:1px solid #E0E0E0; font-size:12px; line-height:16px; margin:0; padding:13px 18px; background:#f9f9f9;">                               
+    <strong>E-mail</strong>: {{var data.email}}<br/>                                
+<p style="font-size:12px; line-height:16px; margin:0 0 8px 0;">When you log in to your account, you will be able to do the following:</p>
+<ul style="font-size:12px; line-height:16px; margin:0 0 16px 0; padding:0;">
+    <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Quickly search and add products to your shopping cart</li>
+    <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; View and reorder previously ordered products</li>
+    <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Browse all of our products at once</li>
+    <li style="list-style:none inside; padding:0 0 0 10px;">&ndash; Download promotional materials</li>
+</ul>
+<p style="font-size:12px; line-height:16px; margin:0;">
+If you have any questions about your account, please feel free to contact us at <br /><a href="mailto:{{var data.support_email}}" style="color:#1E7EC8;">{{var data.support_email}}</a> or by phone at {{config path="general/store_information/phone"}}.</p>
+
+{{template config_path="design/email/footer_template"}}

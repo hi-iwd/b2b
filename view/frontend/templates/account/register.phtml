@@ -1,0 +1,34 @@
+<?php $_helper = $this->helper('IWD\B2B\Helper\Data');
+
+?>
+<section class="cms-login-page">
+</section>
+<section class="cms-b2b-header">
+    <header></header>
+</section>
+<div class="register-page">
+    <div class="register-title">
+        <h4><?php echo __('WHOLESALE REGISTRATION')?></h4>
+        <?php echo $block->getChildHtml('b2b.messages') ?>
+        <p>Thanks for your interest in our products. Please fill out the form below to register for a wholesale account. Approved account will have access to our online order system. If you are an existing wholesale customer and need to place an order with us, please <a class="b2b-signin-modal" href="<?php echo $block->getBaseUrl().'b2b/account/login' ?>">login here.</a></p>
+    </div>
+   <form id="b2b-register-form" method="post" action="<?php echo $block->getPostUrl()?>" enctype="multipart/form-data" data-mage-init='{"validation":{}}'>
+        <?php echo $block->getChildHtml('account.register.storeinfo');?>
+        <div class="register-separator"></div>
+        <?php echo $block->getChildHtml('account.register.shipping');?>
+        <div class="register-separator"></div>
+        <?php echo $block->getChildHtml('account.register.billing');?>
+
+        <div class="register-actions b2b-overflow">
+            <p class="left required-fields">* Required Fields</p>
+            <button class="action submit primary b2b-button right"><span><span><?php echo __('SUBMIT')?></span></span></button>
+        </div>
+    </form>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "b2blogin": {}
+        }
+    }
+</script>

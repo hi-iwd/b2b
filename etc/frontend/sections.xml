@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Customer:etc/sections.xsd">
+	<action name="*">
+	</action>        
+	<action name="b2b/account/login">
+		<section name="messages"/>
+        <section name="customer"/>
+        <section name="cart"/>		
+	</action>
+</config>

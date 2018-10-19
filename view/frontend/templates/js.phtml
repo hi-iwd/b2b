@@ -1,0 +1,32 @@
+<script>
+IWDB2BConfig = '<?php echo $this->getJsonConfig()?>';
+</script>
+<style>
+<?php $_helper = $this->helper('IWD\B2B\Helper\Data');
+$only_special = $_helper->getConfig('b2b/product/only_special');
+if ($only_special) :?>
+    .b2b-wrapper .old-price{display:none}
+<?php endif;?>
+</style>
+<div class="b2b-loader-container">
+<div class="b2b-loader-overlay"></div>
+<div class="b2b-ajax-loader"></div>
+</div>
+<div id="b2b-price-tooltip"></div>
+<div class="b2b-small-screen-cotainer" style="display:none;">
+    <div class="b2b-small-screen-overlay"></div>
+    <div class="b2b-small-screen-touch-message">
+        <div class="b2b-small-screen-icon"></div>
+        <div class="b2b-small-screen-message"><p>Please turn your device</p></div>
+    </div>
+    <div class="b2b-small-screen-notouch-message">
+        <div class="b2b-small-screen-message"><p>Please expand your browser window</p></div>
+    </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "b2bglobal": {}
+        }
+    }
+</script>

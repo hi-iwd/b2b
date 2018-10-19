@@ -1,0 +1,6 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!--<css src="IWD_B2B::css/footer.css" />-->
+    	<!--<css src="IWD_B2B::css/font-awesome-4.6.3/css/font-awesome.css" />-->
+    </head>
+</page>

@@ -1,0 +1,43 @@
+<?php $_helper = $this->helper('IWD\B2B\Helper\Data');
+?>
+<section class="cms-login-page">
+</section>
+<section class="cms-b2b-header">
+    <header></header>
+</section>
+<div class="b2b-login-modal fade" id="b2b-login-modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="b2b-login-modal-dialog modal-dialog b2b-license-modal-dialog">
+		<div class="b2b-login-modal-content">
+			<div class="b2b-login-modal-body b2b-login-form">
+				<div class="b2b-license">
+					<h2><?php echo __('IMPORTANT')?></h2>
+					<h5><?php echo __('The wholesale website it currently unavailable.')?></h5>
+					<p><?php echo __('Please contact us if you need to place an order:')?></p>
+					<span><?php echo $_helper->getConfig('general/store_information/phone')?></span>
+					<a href="mailto:<?php echo $_helper->getConfig('contact/email/recipient_email')?>" class="email-us"><?php echo __('EMAIL US')?></a>
+					<div class="license-login">
+						<p><?php echo __('Not a wholesaler but would still like to login to')?>
+						<?php echo __('your personal account?')?> <a href="<?php echo $block->getUrl('customer/account/login')?>"><?php echo __('Login here')?></a></p>
+					</div>
+				</div>
+				<div>
+					<div class="b2b-iwd-brand-box">
+                        <a href="https://www.iwdagency.com/extensions/b2b-ecommerce-suite-m1-m2.html" target="_blank" title='<?php echo __('Magento B2B by')?>'>
+                            <span><?php echo __('Magento B2B by')?></span>
+                        </a>
+                        <a href="https://www.iwdagency.com" target="_blank" class="svg" title='<?php echo __('IWD')?>'>
+                            <object type="image/svg+xml" data="<?php echo $block->getViewFileUrl('IWD_B2B::images/iwd-brand.svg'); ?>"><?php echo __('IWD')?></object>
+                        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "b2blicense": {}
+        }
+    }
+</script>

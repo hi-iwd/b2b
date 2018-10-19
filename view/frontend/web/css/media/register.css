@@ -1,0 +1,32 @@
+@media screen and (max-width: 1080px) {
+	.b2b-wrapper { margin: 0 auto; width: 950px;}
+	.b2b-wrapper .register-page .left-column,
+	.b2b-wrapper .register-page .right-column{width:336px}
+	.label-770{margin-left: 0 !important;margin-top: 10px;}
+	.checkbox-long .label-770{margin-top: 16px;}
+	.b2b-wrapper .register-page .checkbox-box{width: 260px;}
+	.input-box-770-2{margin-bottom: 14px !important;}
+	.b2b-wrapper .register-page .checkbox-box.checkbox-long{width: 100%;}
+	.b2b-wrapper .register-page .limit-to-column{float: right;width: 441px;}
+}
+@media screen and (min-width: 800px) and (max-width: 1079px) {
+	.b2b-wrapper { margin: 0 auto; width: 740px;}
+	.b2b-wrapper .register-page .checkbox-box{width:100%}
+	.b2b-label-480{margin-left: 0 !important;margin-top: 0 !important;}
+	.b2b-wrapper .register-page .limit-to-column{float: none;width: 430px;margin-bottom:25px}
+	.b2b-wrapper .register-page .limit-to-column input[type="text"]{width: 355px;}
+}
+@media screen and (min-width: 479px) and (max-width: 799px) {
+	.b2b-account-register .b2b-wrapper { width: 460px !important;}
+	.b2b-wrapper .register-page .left-column, .b2b-wrapper .register-page .right-column { width: 410px; }
+}
+@media screen and (max-width: 478px) {
+	.b2b-account-register .b2b-wrapper { width: 300px !important;}
+	.b2b-wrapper .register-page{padding:20px 10px 20px;}
+	.b2b-wrapper .register-page .left-column, .b2b-wrapper .register-page .right-column { width: 280px; }
+
+	.b2b-wrapper .register-page .combo-box .input-box{width:100%;}
+	.b2b-wrapper .register-page .combo-box .left,
+	.b2b-wrapper .register-page .combo-box .right{float:none;}
+	.b2b-wrapper .register-page .register-actions{margin-bottom:0;}
+}

@@ -1,0 +1,104 @@
+<?php
+$info = $block->getFormData()->getInfo(); 
+$account = $block->getFormData()->getAccount();
+?>
+<div class="b2b-overflow">
+        <h5><?php echo __('Store INFO')?></h5>
+        <div class="clear"></div>
+        
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box">
+                    <label><?php echo __('Company Name')?><em>*</em></label>
+                    <div>
+                        <input type="text" name="info[store_name]" id="store_name" class="required-entry" value="<?php echo $block->escapeHtml($info['store_name']) ?>"/>
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+               
+            </div>
+        </div>
+        
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box input-box-770">
+                    <label><?php echo __('First Name')?><em>*</em></label>
+                    <div>
+                        <input type="text" name="account[firstname]" class="required-entry" value="<?php echo $block->escapeHtml($account['firstname']) ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                <div class="input-box">
+                    <label><?php echo __('Last Name')?><em>*</em></label>
+                    <div>
+                        <input type="text" name="account[lastname]" class="required-entry" value="<?php echo $block->escapeHtml($account['lastname']) ?>" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box">
+                    <label><?php echo __('Phone Number')?><em>*</em></label>
+                    <div>
+                        <input type="text" name="account[telephone]" class="required-entry" value="<?php echo $block->escapeHtml($account['telephone']) ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                <div class="input-box">
+                    <label><?php echo __('Fax Number')?></label>
+                    <div>
+                        <input type="text"  name="account[fax]" class="" value="<?php echo $block->escapeHtml($account['fax']) ?>" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box">
+                    <label><?php echo __('Email Address')?><em>*</em></label>
+                    <div>
+                        <input type="text" name="account[email]" class="required-entry validate-email" value="<?php echo $block->escapeHtml($account['email']) ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                 <div class="input-box">
+                    <label><?php echo __('Password')?><em>*</em></label>
+                    <div>
+                        <input type="password" id="password" name="account[password]" class="required-entry validate-password" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box">
+                    <label><?php echo __('Tax ID Number')?><em>*</em></label>
+                    <div>
+                        <input type="text" name="info[ssn]" class="required-entry" value="<?php echo $block->escapeHtml($info['ssn']) ?>"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right right-column">
+                <div class="input-box">
+                    <label><?php echo __('Wholesale / Resale Certificate')?><em>*</em></label>
+                    <div>
+                        <input type="file" name="certificate" id="certificate" class="required-entry" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        
+    </div>

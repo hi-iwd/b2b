@@ -1,0 +1,28 @@
+<div class="b2b-messages-container">
+<?php
+$mode = $block->getMode();
+$messages = $block->getMessages();
+$groups = $block->getGroups();
+foreach ($groups as $key) :
+    if (isset($messages[$key])) :
+$icon = '';
+if($mode == 2){
+    $icons = [];
+    $icons['success'] = 'check-circle';
+    $icons['notice'] = 'info-circle';
+    $icons['warning'] = 'exclamation-circle';
+    $icons['error'] = 'times-circle';
+    $icon = '<i class="b2b_msg_icon fa fa-'.$icons[$key].'"></i>';
+}
+?>
+<?php if($key == 'success'){ ?>
+    <a href='/b2b/account/login' class='b2b-<?php echo $key;?>'><?php echo $icon;?><?php echo implode('<br/>', $messages[$key]);?></a>
+<?php }
+else { ?>
+    <a class='b2b-<?php echo $key;?>'><?php echo $icon;?><?php echo implode('<br/>', $messages[$key]);?></a>
+<?php
+}
+    endif;
+endforeach;
+?>
+</div>

@@ -1,0 +1,30 @@
+.header-minicart {
+    display: none !important;
+}
+
+.wrapper, #header, .footer-container.footer1 {
+    min-width: 480px !important;
+}
+
+#product-options-wrapper .stock-notification {
+    display: none !important;
+}
+
+@media only screen and (max-width: 479px) {
+    .wrapper {
+        width: 480px !important;
+        overflow: hidden;
+    }
+    .page-header-container .account-link-wrapper {
+        width: 50%;
+    }
+    .header4.page-header .table-cell-container.nav-only {
+        width: 50%;
+    }
+    .page-header-container .skip-links.nav-only {
+        width: 20%;
+    }
+    .header4.page-header .header-container .table-container.bottom {
+        display: none;
+    }
+}

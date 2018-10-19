@@ -1,0 +1,106 @@
+<?php
+$shipping = $block->getFormData()->getShipping();
+$add = $block->getFormData()->getAdd();
+$ship_c_id = isset($shipping['country_id'])?$shipping['country_id']:null;
+?>
+<div class="b2b-overflow">
+    <h5><?php echo __('Shipping address')?></h5>
+    
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box field street required">
+                    <label for="street_1" class="label"><span><?php /* @escapeNotVerified */ echo __('Address 1') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="shipping[street][]" class="required-entry" value="<?php echo $block->escapeHtml(isset($shipping['street'][0])?$shipping['street'][0]:'') ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                <div class="input-box field street">
+                    <label for="street_2" class="label"><span><?php /* @escapeNotVerified */ echo __('Address 2') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="shipping[street][]" value="<?php echo $block->escapeHtml(isset($shipping['street'][0])?$shipping['street'][1]:'') ?>" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box field required">
+                    <label for="city" class="label"><span><?php /* @escapeNotVerified */ echo __('City') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="shipping[city]" class="required-entry" value="<?php echo $block->escapeHtml($shipping['city']) ?>" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right right-column">
+                <div class="input-box field region required">
+                    <label for="region_id" class="label"><span><?php /* @escapeNotVerified */ echo __('State') ?></span></label>
+                    <div class="control">
+                         <select id="region_id" name="shipping[region_id]" title="<?php echo __('State/Province') ?>" class="validate-select" style="display:none;">
+                                <option value=""><?php echo __('Please select...') ?></option>
+                         </select>
+                         <input type="text" id="region" name="shipping[region]" value="<?php echo $block->escapeHtml(isset($shipping['region'])?$shipping['region']:'') ?>" title="<?php echo __('State/Province') ?>" class="input-text <?php echo $this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('region') ?>" style="display:none;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box field zip required">
+                    <label for="zip" class="label"><span><?php /* @escapeNotVerified */ echo __('Zipcode') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="shipping[postcode]" id="zip" class="required-entry" value="<?php echo $block->escapeHtml($shipping['postcode']) ?>"/>
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                <div class="input-box field country required">
+                    <label for="shipping_country" class="label"><span><?php /* @escapeNotVerified */ echo __('Country') ?></span></label>
+                    <div class="control">
+                        <?php echo $block->getCountryHtmlSelect($ship_c_id, 'shipping[country_id]', 'shipping_country', 'Country') ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box">
+                    <label><?php echo __('FedEx Account Number')?></label>
+                    <div>
+                        <input type="text" name="add[fedex]" value="<?php echo $block->escapeHtml($add['fedex']) ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                <div class="input-box">
+                    <label><?php echo __('UPS Account Number')?></label>
+                    <div>
+                        <input type="text" name="add[ups]" value="<?php echo $block->escapeHtml($add['ups']) ?>" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "#shipping_country": {
+            "regionUpdater": {
+                "optionalRegionAllowed": <?php /* @escapeNotVerified */ echo($block->isShowNonRequiredState() ? 'true' : 'false'); ?>,
+                "regionListId": "#region_id",
+                "regionInputId": "#region",
+                "postcodeId": "#zip",
+                "form": "#form-validate",
+                "regionJson": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Directory\Helper\Data')->getRegionJson() ?>,
+                "defaultRegion": "<?php echo isset($shipping['region_id'])?$shipping['region_id']:'';?>",
+                "countriesWithOptionalZip": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Directory\Helper\Data')->getCountriesWithOptionalZip(true) ?>
+            }
+        }
+    }
+</script>

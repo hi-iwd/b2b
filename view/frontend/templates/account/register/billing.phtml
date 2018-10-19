@@ -1,0 +1,98 @@
+<?php
+$billing = $block->getFormData(true)->getBilling();
+$bill_c_id = isset($billing['country_id'])?$billing['country_id']:null;
+$same_as_shipping = isset($billing['same_as_shipping'])?$billing['same_as_shipping']:false;
+if ($same_as_shipping != '1')
+    $same_as_shipping = false;
+?>
+<div class="b2b-overflow">
+    <h5><?php echo __('Billing address')?></h5>
+    <input type="hidden" name="billing[same_as_shipping]" id="billing_same_as_shipping" value="" autocomplete="off">
+    <div class="input-box same-as">        
+        <div class="checkbox-box">
+            <label><input type="checkbox" id="same_as_shipping" <?php if ($same_as_shipping == '1'): ?>checked="checked"<?php endif;?> /><?php echo __('Same as shipping address')?></label>
+        </div>
+    </div>
+                
+    <div class="clear"></div>
+    <div id="b2b-billing-form" >
+    
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box field street required">
+                    <label for="street_1" class="label"><span><?php /* @escapeNotVerified */ echo __('Address 1') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="billing[street][]" class="required-entry" value="<?php echo $block->escapeHtml(isset($billing['street'][0])?$billing['street'][0]:'') ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                <div class="input-box field street">
+                    <label for="street_2" class="label"><span><?php /* @escapeNotVerified */ echo __('Address 2') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="billing[street][]" value="<?php echo $block->escapeHtml(isset($billing['street'][1])?$billing['street'][1]:'') ?>"  />
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box field required">
+                    <label for="city" class="label"><span><?php /* @escapeNotVerified */ echo __('City') ?></span></label>
+                    <div class="control">
+                         <input type="text" name="billing[city]" class="required-entry" value="<?php echo $block->escapeHtml($billing['city']) ?>" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="right right-column">
+                <div class="input-box field region required">
+                    <label for="billing_region_id" class="label"><span><?php /* @escapeNotVerified */ echo __('State') ?></span></label>
+                    <div class="control">
+                        <select id="billing_region_id" name="billing[region_id]" title="<?php echo __('State/Province') ?>" class="validate-select" style="display:none;">
+                            <option value=""><?php echo __('Please select...') ?></option>
+                        </select>
+                        <input type="text" id="billing_region" name="billing[region]" value="<?php echo $block->escapeHtml(isset($billing['region'])?$billing['region']:'') ?>" title="<?php echo __('State/Province') ?>" class="input-text <?php echo $this->helper('Magento\Customer\Helper\Address')->getAttributeValidationClass('region') ?>" style="display:none;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="b2b-overflow">
+            <div class="left left-column">
+                <div class="input-box field zip required">
+                    <label for="billing_zip" class="label"><span><?php /* @escapeNotVerified */ echo __('Zipcode') ?></span></label>
+                    <div class="control">
+                        <input type="text" name="billing[postcode]" id="billing_zip" class="required-entry" value="<?php echo $block->escapeHtml($billing['postcode']) ?>" />
+                    </div>
+                </div>
+            </div>
+            <div class="right right-column">
+                <div class="input-box field country required">
+                    <label for="billing_country" class="label"><span><?php /* @escapeNotVerified */ echo __('Country') ?></span></label>
+                    <div class="control">
+                        <?php echo $block->getCountryHtmlSelect($bill_c_id, 'billing[country_id]', 'billing_country', 'Country') ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+     </div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#billing_country": {
+            "regionUpdater": {
+                "optionalRegionAllowed": <?php /* @escapeNotVerified */ echo($block->isShowNonRequiredState() ? 'true' : 'false'); ?>,
+                "regionListId": "#billing_region_id",
+                "regionInputId": "#billing_region",
+                "postcodeId": "#billing_zip",
+                "form": "#form-validate",
+                "regionJson": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Directory\Helper\Data')->getRegionJson() ?>,
+                "defaultRegion": "<?php echo isset($billing['region_id'])?$billing['region_id']:'';?>",
+                "countriesWithOptionalZip": <?php /* @escapeNotVerified */ echo $this->helper('Magento\Directory\Helper\Data')->getCountriesWithOptionalZip(true) ?>
+            }
+        }
+    }
+</script>

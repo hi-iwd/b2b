@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="b2b_onecolumn_login" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>B2B Not Active</title>
+        <css src="IWD_B2B::css/styles.css"/>
+        <css src="IWD_B2B::css/bootstrap.css"/>
+        <css src="IWD_B2B::css/media/signin.css"/>
+        <css src="IWD_B2B::css/media/global.css"/>
+    </head>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">B2B Not Active</argument>
+            </action>            
+        </referenceBlock>
+        <referenceContainer name="header.container" remove="true" />
+        <referenceContainer name="b2b_content">
+			<block class="IWD\B2B\Block\Account\Login" name="account.license" as="b2b.account.license" template="account/license.phtml">
+			</block>
+        </referenceContainer>
+		<referenceContainer name="page.wrapper">
+			<referenceContainer name="footer-container" remove="true" />
+		</referenceContainer>
+		<referenceContainer name="before.body.end">
+			<referenceContainer name="b2b.sticky.footer" remove="true" />
+		</referenceContainer>
+    </body>
+</page>

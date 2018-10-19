@@ -1,0 +1,45 @@
+<?php $_helper = $this->helper('IWD\B2B\Helper\Data');?>
+<div class="b2b-modal fade signin b2b-forgot-modal" id="b2b-signin-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+<?php if (!$_helper->isLoggedIn()):?>
+    <div id="b2b-forgot-form" class="b2b-forgot-form hidden">
+        <form method="post" action="" id="form-validate-forgot" autocomplete="off" data-mage-init='{"validation":{}}'>
+            <div>
+                <h2><?php echo __('Forgot your password?') ?></h2>
+                <p><?php echo __('Please enter your email address below. You will receive a link to reset your password.') ?></p>
+                <ul class="form-list">
+                    <li>
+                        <label for="email_address" class="required"><?php echo __('Email Address') ?></label>
+                        <div class="input-box">
+                            <input type="text" name="email" alt="email" id="email_address" class="required-entry validate-email" value="" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons-set">
+                <p class="back-link" id="back-link-login"><a><?php echo __('Back to Login') ?></a></p>
+            </div>
+            <div class="buttons-set forgot-submit submit">
+                <button type="submit" title="<?php echo __('Submit') ?>" class="button action primary"><?php echo __('Submit') ?></button>
+            </div>
+        </form>
+        <div class="b2b-iwd-brand-container">
+    		<div class="b2b-iwd-brand-box">
+                <a href="https://www.iwdagency.com/extensions/b2b-ecommerce-suite-m1-m2.html" target="_blank" title='<?php echo __('Magento B2B by')?>'>
+                    <span><?php echo __('Magento B2B by')?></span>
+                </a>
+                <a href="https://www.iwdagency.com" target="_blank" class="svg" title='<?php echo __('IWD')?>'>
+                    <object type="image/svg+xml" data="<?php echo $block->getViewFileUrl('IWD_B2B::images/iwd-brand.svg'); ?>"><?php echo __('IWD')?></object>
+                </a>
+    		</div>
+        </div>
+    </div>
+    <?php else:?>
+       <div class="b2b-logout-form">
+        <h4><?php echo __('Are you sure you want to log out?')?></h4>
+        <div class="b2b-logout-actions">
+            <a class="back-close" data-dismiss="modal"><?php echo __('Back')?></a>
+            <a class="logout-close" href=""><?php echo __('Logout')?></a>
+        </div>
+       </div>
+    <?php endif?>
+</div>

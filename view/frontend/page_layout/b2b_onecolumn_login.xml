@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="empty"/>        
+    <move element="ajax.message.placeholder" destination="b2b.messages.content" before="-" />
+    <move element="messages" destination="b2b.messages.content" before="-" />
+    <referenceContainer name="page.wrapper">
+		<container name="b2b.messages.content" htmlTag="div" htmlClass="b2b-messages-wrapper-hidden"></container>
+		<referenceContainer name="main.content" htmlClass="b2b-page-main">
+			<referenceContainer name="columns.top" remove="true"/>			
+			<referenceContainer name="columns" remove="true"/>
+			<container name="b2b.main.wrapper" htmlTag="div" htmlClass="b2b-main-wrapper">
+				<container name="b2b_content" htmlTag="div" htmlClass="b2b-wrapper" label="B2B Main Content Area" />
+			</container>
+		</referenceContainer>
+        <container name="header.container" as="header_container" label="Page Header Container"  htmlTag="header" htmlClass="page-header" before="main.content"/>
+        <container name="footer-container" as="footer" before="before.body.end" label="Page Footer Container" htmlTag="footer" htmlClass="page-footer" />
+    </referenceContainer>
+</layout>

@@ -1,0 +1,10 @@
+<?php $_customerData = $block->getCustomerData();?>
+<div class="b2b-sub-header">
+    <?php if($_customerData):?>
+    <h5><?php echo $_customerData->getStoreName()?></h5>
+    <?php endif;?>
+        <div class="b2b-overflow">
+            <h4 class="left">WELCOME <strong><?php echo $block->getName()?></strong>  <a href="<?php echo $block->getUrl('customer/account/logout');?>" class="b2b-logout">(LOGOUT)</a></h4>
+            <a href="<?php echo $block->getBaseUrl()?>" class="right action primary"><?php echo __('SHOP ENTIRE STORE')?></a>
+        </div>
+</div>

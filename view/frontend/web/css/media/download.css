@@ -1,0 +1,55 @@
+@media screen and (max-width: 767px) {
+    #b2b-download-modal {
+        width: 460px;
+        margin: auto;
+        z-index: 1060;
+    }
+    #b2b-download-modal .b2b-modal-body {
+        padding: 27px 25px !important
+    }
+    #b2b-download-modal .b2b-modal-dialog {
+        width: 430px;
+    }
+    #b2b-download-modal .b2b-modal-dialog .b2b-wrapper {
+        padding: 0;
+        width: 100%;
+    }
+    #b2b-download-modal a.close {
+        right: -2px;
+        top: 0;
+    }
+    #b2b-download-modal .table-header .b2b-product-name {
+        width: 172px;
+    }
+    #b2b-download-modal .table-header .b2b-product-name input {
+        width: 157px;
+    }
+    #b2b-download-modal .table-header .b2b-product-type {
+        width: 74px
+    }
+    #b2b-download-modal .table-header .b2b-product-type select {
+        width: 54px;
+    }
+    #b2b-download-modal .table-header .b2b-product-size {
+        width: 65px
+    }
+    #b2b-download-modal .table-header .b2b-product-size input {
+        width: 45px;
+        padding: 0 2px
+    }
+    #b2b-download-modal .table-header .b2b-product-select {
+        width: 55px
+    }
+    #b2b-download-modal .table-body .b2b-product-name {
+        width: 172px;
+    }
+    #b2b-download-modal .table-body .b2b-product-type {
+        width: 74px
+    }
+    #b2b-download-modal .table-body .b2b-product-size {
+        width: 65px
+    }
+    #b2b-download-modal .table-body .b2b-product-select {
+        width: 55px
+    }
+}

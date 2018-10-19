@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="b2b_emails_recieved_template" label="New Application(store owner)" file="new_application_received.html" type="html" module="IWD_B2B" area="frontend"/>
+    <template id="b2b_emails_customer_recieved_template" label="Confirmation Application(for user)" file="new_application_received_customer.html" type="html" module="IWD_B2B" area="frontend"/>
+    <template id="b2b_emails_customer_approved" label="Application Approved" file="application_approved.html" type="html" module="IWD_B2B" area="frontend"/>
+    <template id="b2b_emails_multiuser_template" label="Subuser Invitation" file="multiuser_email.html" type="html" module="IWD_B2B" area="frontend"/>
+</config>

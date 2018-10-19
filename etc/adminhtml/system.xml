@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="iwd" translate="label" sortOrder="210">
+            <label>IWD Agency</label>
+        </tab>
+        <section id="b2b" translate="label" type="text" sortOrder="910" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <tab>iwd</tab>
+            <label>B2B Suite</label>
+            <resource>Magento_Config::config</resource>
+            <group id="default" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Default Configuration</label>
+                <field id="info" translate="label" type="label" showInDefault="1" showInWebsite="1" showInStore="1"
+                       sortOrder="0">
+                    <label>Version</label>
+                    <frontend_model>IWD\B2B\Block\System\Config\Form\Field\Extensions</frontend_model>
+                </field>
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enable Module?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="access" translate="label" type="text" sortOrder="16" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Access</label>
+                <field id="group" translate="label" type="multiselect" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Allowed Customer Groups</label>
+                    <source_model>Magento\Customer\Model\Config\Source\Group</source_model>
+                    <can_be_empty>0</can_be_empty>
+                    <validate>required-entry</validate>
+                    <config_path>b2b/access_login_form/group</config_path>
+                </field>
+                <field id="restrict_access" translate="label" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Restrict Access For Not Logged-In Users?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <validate>required-entry</validate>
+                    <config_path>b2b/access_login_form/restrict_access</config_path>
+                </field>
+                <field id="restrict_segment" translate="label" type="multiselect" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Restrict Area</label>
+                    <source_model>IWD\B2B\Model\System\Config\Source\Segment</source_model>
+                    <can_be_empty>0</can_be_empty>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="restrict_access">1</field>
+                    </depends>
+                    <config_path>b2b/access_login_form/restrict_segment</config_path>
+                </field>
+                <group id="hide_info" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                    <label>Show/Hide Options for not logged in users</label>
+                    <field id="hide_info_price" translate="label" type="select" sortOrder="10" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Hide Product Price</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <config_path>b2b/access/hide_info_price</config_path>
+                    </field>
+                    <field id="price_button_text" translate="label" type="text" sortOrder="20" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Button Text</label>
+                        <depends>
+                            <field id="hide_info_price">1</field>
+                        </depends>
+                        <config_path>b2b/access/price_button_text</config_path>
+                    </field>
+                    <field id="hide_info_addtocart" translate="label" type="select" sortOrder="30" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Hide Add to Cart button</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment>
+                            <![CDATA[If yes, Add to Cart button will be hidden and replaced with button text entered below. For example: Register to Purchase]]>
+                        </comment>
+                        <config_path>b2b/access/hide_info_addtocart</config_path>
+                    </field>
+                    <field id="addtocart_button_text" translate="label" type="text" sortOrder="40" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Button Text</label>
+                        <can_be_empty>0</can_be_empty>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="hide_info_addtocart">1</field>
+                        </depends>
+                        <config_path>b2b/access/addtocart_button_text</config_path>
+                    </field>
+                </group>
+            </group>
+            <group id="access_login_form" translate="label" type="text" sortOrder="16" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Login Form</label>
+                <field id="disable_standard_login_registration" translate="label" type="select" sortOrder="6"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Disable Magento's standard Login &amp; Registration pages?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Only wholesaler users would be able to log in!</comment>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="redirect_after_login" translate="label" type="select" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Redirect to Page after Login</label>
+                    <source_model>IWD\B2B\Model\System\Config\Source\RedirectPages</source_model>
+                    <config_path>b2b/access_login_form/redirect_after_login</config_path>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="redirect_after_login_custom" translate="label" type="text" sortOrder="4" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Redirect to Custom Url</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="redirect_after_login">custom</field>
+                    </depends>
+                    <config_path>b2b/access_login_form/redirect_after_login_custom</config_path>
+                </field>
+                <field id="message" translate="label" type="textarea" sortOrder="40" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Message for User Without Access</label>
+                </field>
+                <field id="dismessage" translate="label" type="textarea" sortOrder="40" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Message for Disabled Sub-User</label>
+                </field>
+                <field id="redirect" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Redirect URL if User Doesn't Have Access</label>
+                </field>
+                <field id="title1" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Login Page Title 1</label>
+                </field>
+                <field id="title2" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Login Page Title 2</label>
+                </field>
+                <field id="text_above" translate="label" type="textarea" sortOrder="80" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Text Above Apply Button</label>
+                </field>
+                <field id="text_apply" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Apply / Register Button</label>
+                </field>
+                <field id="text_below" translate="label" type="textarea" sortOrder="100" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Text Below Apply Button</label>
+                </field>
+            </group>
+            <group id="register_form" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Registration Form</label>
+                <field id="success" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Submission Confirmation Message</label>
+                </field>
+            </group>
+            <group id="pro_information" translate="label" type="text" sortOrder="32" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Get More with B2B Suite Pro</label>
+                <fieldset_css>iwd-b2b-pro-info-section</fieldset_css>
+                <frontend_model>IWD\B2B\Block\Info</frontend_model>
+            </group>
+            <group id="success_page" translate="label" type="text" sortOrder="35" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Requester Order Confirmation Page</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="title1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Order Number Title</label>
+                </field>
+                <field id="title2" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Text row 1</label>
+                </field>
+                <field id="title3" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Text row 2</label>
+                </field>
+                <field id="text_button" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Review Order Button</label>
+                </field>
+            </group>
+            <group id="emails" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Email Notifications</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="admins" translate="label" type="multiselect" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Store Admins to Notify</label>
+                    <source_model>IWD\B2B\Model\System\Config\Source\Admins</source_model>
+                </field>
+                <field id="recieved_template" translate="label" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>New Application Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+                <field id="customer_recieved_template" translate="label" type="select" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Customer Confirmation Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+                <field id="customer_approved" translate="label" type="select" sortOrder="40" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Application Approved Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+                <field id="multiuser_template" translate="label" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Multiuser Invitation Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+            </group>
+            <group id="b2btables" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>B2B Tables</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="addtocart_method" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Add Products to Cart</label>
+                    <source_model>IWD\B2B\Model\System\Config\Source\Addtocart</source_model>
+                </field>
+                <group id="quick_order_table" translate="label" type="text" sortOrder="51" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Quick Order</label>
+                    <field id="table_width" translate="label" type="select" sortOrder="10" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Table Width</label>
+                        <source_model>IWD\B2B\Model\System\Config\Source\TableWidth</source_model>
+                    </field>
+                </group>
+                <group id="view_all_products_table" translate="label" type="text" sortOrder="52" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>View All Products Table</label>
+                    <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                           showInStore="1">
+                        <label>Title</label>
+                    </field>
+                    <field id="desc" translate="label" type="textarea" sortOrder="20" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Description</label>
+                    </field>
+                    <field id="table_width_products" translate="label" type="select" sortOrder="30" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Table Width</label>
+                        <source_model>IWD\B2B\Model\System\Config\Source\TableWidth</source_model>
+                    </field>
+                </group>
+                <group id="prev_ordered_table" translate="label" type="text" sortOrder="53" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Previously Ordered Table</label>
+                    <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                           showInStore="1">
+                        <label>Title</label>
+                    </field>
+                    <field id="desc" translate="label" type="textarea" sortOrder="20" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Description</label>
+                    </field>
+                    <field id="table_width_reorder" translate="label" type="select" sortOrder="30" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Table Width</label>
+                        <source_model>IWD\B2B\Model\System\Config\Source\TableWidth</source_model>
+                    </field>
+                </group>
+            </group>
+            <group id="download_center_table" translate="label" type="text" sortOrder="54" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Download Center Block</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="desc" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Description</label>
+                </field>
+                <field id="products_files_button" translate="label" type="text" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Products Files Button</label>
+                </field>
+                <field id="marketing_files_button" translate="label" type="text" sortOrder="40" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Marketing Files Button</label>
+                </field>
+            </group>
+
+            <group id="order_by_file_block" translate="label" type="text" sortOrder="60" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Order by File Block on Dashboard</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="desc" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Description</label>
+                </field>
+                <field id="button" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Button Title</label>
+                </field>
+            </group>
+            <group id="account_users_block" translate="label" type="text" sortOrder="65" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Account Users Block on Dashboard</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="title" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Title</label>
+                </field>
+                <field id="desc" translate="label" type="textarea" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Description</label>
+                </field>
+                <field id="button" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Button Title</label>
+                </field>
+            </group>
+            <group id="credit_limit_notification" translate="label" type="text" sortOrder="80" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Credit Limit</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="credit_notification" translate="label" type="textarea" sortOrder="40" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Notification if Credit Limit Exceeded</label>
+                </field>
+            </group>
+
+            <group id="guest_checkout" translate="label" type="text" sortOrder="85" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Guest Checkout</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="use_quest_limit" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Apply Checkout Limit for Guests?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="use_quest_limit_message" translate="label" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Show Checkout Limit Message?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="use_quest_limit">1</field>
+                    </depends>
+                </field>
+                <field id="guest_limit_notification" translate="label" type="textarea" sortOrder="40" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Notification for Checkout Limit</label>
+                    <depends>
+                        <field id="use_quest_limit">1</field>
+                    </depends>
+                </field>
+            </group>
+
+            <group id="matrix" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Product Matrix</label>
+                <fieldset_css>iwd-b2b-pro-section</fieldset_css>
+                <field id="availability" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Display Availability?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="prev_ordered" translate="label" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Display Prev. Ordered?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>
+                        <![CDATA[If No, then this will not show on the Previously Ordered Items table]]>
+                    </comment>
+                </field>
+                <field id="sku" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Display Sku?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="price" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Display Price?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="align" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Align Table</label>
+                    <source_model>IWD\B2B\Model\System\Config\Source\Align</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

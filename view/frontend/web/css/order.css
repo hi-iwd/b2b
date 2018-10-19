@@ -1,0 +1,187 @@
+.page-title-wrapper .order-date {
+    margin-bottom: 8px !important;
+}
+
+.page-title-wrapper .order-date date {
+    float: left;
+}
+
+.page-title-wrapper .order-date .submitted_by {
+    float: left;
+    margin-left: 32px;
+    margin-bottom: 14px !important;
+}
+
+.page-title-wrapper .order-date .submitted_by span.sb_name {
+    font-weight: bold;
+}
+
+.page-title-wrapper .order-actions-toolbar .action.reorder {
+    float: left;
+    margin-right: 35px;
+}
+
+.page-title-wrapper .order-actions-toolbar .action.print {
+    float: left;
+}
+
+.page-title-wrapper .clear {
+    clear: both
+}
+
+.b2b-order-links {}
+
+.b2b-order-links .item {
+    margin-right: 10px !important;
+}
+
+.b2b-order-links .item:last-child {
+    margin-right: 0 !important;
+}
+
+.b2b-order-links .item a {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+@media screen and (max-width: 1100px) {
+    .b2b-order-links .item a {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .b2b-order-links .item {
+        margin-right: 0 !important;
+    }
+    .b2b-order-links .item a {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .b2b-order-links .item a {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .page-title-wrapper .order-actions-toolbar {
+        margin-bottom: 35px !important;
+    }
+    .b2b-order-links .item {
+        margin-right: 0px !important;
+    }
+    .b2b-order-links .item a {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+
+.b2b-order-links .b2b-item-tab.current a {
+    background: #fff;
+    border-bottom-color: #fff;
+}
+
+.b2b-order-container {}
+
+.b2b-order-tabs-container {}
+
+.items.order-links.b2b-order-links {}
+
+.b2b-order-tabs-content-container {}
+
+.b2b-order-tabs-content-container .b2b-order-tab-content {}
+
+.b2b-order-tabs-content-container .b2b-order-tab-content .block .block-title {
+    display: none !important;
+}
+
+.b2b-order-tabs-content-container .b2b-order-tab-content.b2b-order-details-items {}
+
+.b2b-order-tabs-content-container .b2b-order-tab-content.b2b-tab order-details-items.hidden {}
+
+.b2b-order-tabs-content-container .b2b-order-tab-content.hidden {
+    display: none !important;
+}
+
+.b2b-order-tabs-content-container .block-order-details-view .block-content .box {
+    padding-right: 10px;
+}
+
+.b2b-order-tabs-content-container .block-order-details-view .block-content .box:last-child {
+    padding-right: 0;
+}
+
+.block-order-details-history .field-comment {
+    margin-bottom: 30px;
+}
+
+.block-order-details-history .fieldset.history {
+    margin-bottom: 20px;
+}
+
+.block-order-details-history .field-status {
+    width: 49%;
+}
+
+.block-order-details-history .field.order-history-comments-options {}
+
+.b2b-comments-table .col {
+    background-color: transparent !important;
+    border-bottom: 1px solid #ccc !important;
+}
+
+.b2b-comments-table .col-date {
+    width: 100px;
+    min-width: 100px !important;
+}
+
+.b2b-comments-table .col-from {
+    width: 15%;
+}
+
+.b2b-comments-table .col-content {
+    width: 75%;
+}
+
+.b2b-comments-table .col-status {
+    width: 10%;
+    min-width: 80px !important;
+}
+
+.b2b-order-actions {
+    position: relative;
+    top: -5px;
+}
+
+.b2b-order-actions .primary .action {
+    margin-right: 25px !important;
+}
+
+.b2b-order-actions .action {
+    border-radius: 0;
+}
+
+.b2b-order-actions.actions-toolbar>.primary {
+    float: none;
+}
+
+.b2b-order-actions .action.primary.approve {}
+
+.b2b-order-actions .action.primary.approve:focus, .b2b-order-actions .action.primary.approve:active, .b2b-order-actions .action.primary.approve:hover {}
+
+.b2b-order-actions .action.primary.reject {
+    background-color: #d9d9d9;
+    color: #000;
+    border-color: #d9d9d9;
+}
+
+.b2b-order-actions .action.primary.reject:focus, .b2b-order-actions .action.primary.reject:active, .b2b-order-actions .action.primary.reject:hover {
+    background-color: #d0d0d0;
+    border-color: #d0d0d0;
+    color: #000;
+}

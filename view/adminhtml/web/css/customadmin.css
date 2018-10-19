@@ -1,0 +1,89 @@
+.admin__scope-old .field-credit_limit .control{
+    position: relative;
+}
+.admin__scope-old .field-credit_limit .addon, .admin__scope-old .field-available_credit .addon {
+    direction: rtl;
+}
+.admin__scope-old .addon {
+    display: table;
+    padding: 0;
+    width: 100%;
+}
+.admin__form-field-control .admin__control-text, .admin__field-control .admin__control-text, .admin__form-field-control .admin__control-textarea, .admin__field-control .admin__control-textarea {
+    width: 95% !important;
+}
+
+.admin__scope-old .field-credit_limit .addon input[type="text"]:first-child,
+ .admin__scope-old .field-available_credit .addon input[type="text"]:first-child{
+    border-radius: 0 1px 1px 0;
+}
+.admin__scope-old .field-credit_limit > input, .admin__scope-old .field-available_credit > input {
+    float: left;
+
+}
+.admin__scope-old .field-credit_limit input[type="text"], .admin__scope-old .field-available_credit input[type="text"] {
+    border-width: 1px 1px 1px 0;
+}
+.admin__scope-old input[type="text"] {
+    background-color: #fff;
+    border: 1px solid #adadad;
+    border-radius: 1px;
+    box-sizing: border-box;
+    color: #303030;
+    font-size: 14px;
+    font-weight: 500;
+    height: 34px;
+    padding: 4px;
+}
+.field-credit_limit .admin__field { border: 1px solid #adadad; }
+.field-available_credit .admin__field {  }
+.admin__scope-old .addon input {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+}
+.admin__scope-old .field-credit_limit .addafter, .admin__scope-old .field-available_credit .addafter {
+    border-radius: 1px 0 0 1px;
+    border-width: 1px 0 1px 1px;
+}
+.admin__scope-old .field-credit_limit input[type="text"] ~ .addafter strong, .admin__scope-old .field-available_credit input[type="text"] ~ .addafter strong {
+    font-size: 18px;
+}
+.admin__scope-old .addon input[type="text"] ~ .addafter strong {
+    background: #fff none repeat scroll 0 0;
+    color: #858585;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 3px 0 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    position: relative;
+    top: 0;
+}
+.admin__scope-old .admin__field label.addbefore {
+  padding: 2px 5px 5px 5px;
+  color: #858585;
+  font-size: 18px;
+}
+.admin__scope-old .field-credit_limit input[type="text"], .admin__scope-old .field-available_credit input[type="text"] { border: none !important; }
+.admin__scope-old .field-available_credit [readonly] {opacity:1;}
+.field-credit_limit .admin__field, .field-available_credit .admin__field {
+  border: 1px solid #adadad;
+  width: 95%;
+}
+
+.field-image .admin__field-control {
+  width: inherit !important;
+}
+
+.admin__field.field.field-image {
+  margin-bottom:5px;
+}
+
+.admin__scope-old .form-inline .label.admin__field-label{width:30%;}
+
+.admin__scope-old .form-inline div:not([class*="fields-group"]) > .field > .label span,
+.admin__scope-old .form-inline .fieldset > .field > .label span{word-break:unset !important;overflow-wrap:break-word !important;}

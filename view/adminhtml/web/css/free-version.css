@@ -1,0 +1,140 @@
+/*
+ * Copyright © 2018 IWD Agency - All rights reserved.
+ * See LICENSE.txt bundled with this module for license details.
+ */
+
+/* Pro Info section */
+.section-config.iwd-b2b-pro-section[role="menu-item"],
+.section-config.iwd-b2b-pro-section.b2b-pro-form-tab {
+    position: relative;
+    border-bottom: none;
+}
+
+.section-config.iwd-b2b-pro-section.b2b-pro-form-tab .entry-edit-head-link {
+    top: 20px;
+    right: 20px;
+}
+
+.section-config.iwd-b2b-pro-section[role="menu-item"] .entry-edit-head-link {
+    top: 14px;
+    right: 14px;
+}
+
+.section-config.iwd-b2b-pro-section .entry-edit-head a {
+    margin-left: 50px;
+}
+
+.section-config.iwd-b2b-pro-section .entry-edit-head {
+    position: relative;
+}
+
+.section-config.iwd-b2b-pro-section .entry-edit-head-link {
+    cursor: pointer;
+    position: absolute;
+    height: 18px;
+    width: 43px;
+    top: 22px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #0D5FD6;
+}
+
+.section-config.iwd-b2b-pro-section .entry-edit-head-link:before {
+    content: 'PRO';
+    height: 10px;
+    width: 22px;
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0px 10px;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+/* Popup Dialog */
+
+.mage-free-version-dialog .modal-title {
+    color: #333333;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 300;
+    margin-right: 0.9rem;
+    line-height: 30px;
+}
+
+.mage-free-version-dialog header.modal-header {
+    padding-bottom: 3.5rem;
+}
+
+.mage-free-version-dialog .modal-inner-wrap {
+    max-width: 798px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 12px 1px rgba(0, 0, 0, 0.3);
+}
+
+.mage-free-version-dialog button.action-close {
+    padding: 3.5rem;
+}
+
+.mage-free-version-dialog .modal-footer .action {
+    height: 46px;
+    width: 48px;
+    color: #008BDB;
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 52px;
+    background: none;
+    border: none;
+    margin-right: 30px;
+    padding: 0;
+}
+
+.free-b2b-dialog-content {
+    color: #303030;
+    margin: 0;
+    display: block;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+    white-space: pre-line;
+    margin-right: 12px;
+}
+
+/* Pro Info section */
+
+.iwd-b2b-pro-info-section .free-b2b-dialog-content {
+    letter-spacing: 0.5px;
+}
+
+.mage-free-version-dialog .modal-footer button.action-primary,
+.iwd-b2b-pro-info-section button {
+    height: 46px;
+    width: 138px;
+    background-color: #0D5FD6 !important;
+    border: none;
+}
+
+.iwd-b2b-pro-info-section fieldset.config {
+    padding-top: 20px;
+}
+
+.iwd-b2b-pro-info-section .entry-edit-head a {
+    color: #0D5FD6 !important;
+}
+
+.iwd-b2b-pro-info-section button {
+    margin-top: 30px;
+    padding: 0;
+}
+
+.iwd-b2b-pro-info-section button span {
+    height: 16px;
+    width: 83px;
+    color: #FFFFFF;
+    font-family: "Open Sans";
+    font-size: 16px;
+}
